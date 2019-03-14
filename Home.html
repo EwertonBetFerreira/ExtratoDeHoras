@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Formulário Cálculo De Horas</title>
+    <meta charset="utf-8" />
+    <link href="Estilo.css" rel="stylesheet" media="all" />
+    <script src="JavaScript.js"></script>
+ 
+</head>
+<body>
+    <form name="meu_form">
+ 
+        <h1>Preencha as Informações Abaixoo</h1>
+        <h2>Quais Produtos?</h2>
+ 
+			<input type="checkbox" onclick="ExibirNFe()" id="NFeid" name="NFe"/> NF-e
+			<input type="checkbox" onclick="ExibirCTe()" id="CTeid" name="CTe"/> CT-e
+			<input type="checkbox" onclick="ExibirMDFe()" id="MDFeid" name="MDFe"/> MDF-e
+			<input type="checkbox" onclick="" id="NFSeid" name="NFse"/> NFS-e
+			<input type="checkbox" onclick="" id="NFCeid" name="NFCe"/> NFC-e
+			<input type="checkbox" onclick="" id="REINFid" name="REINF"/> REINF </p>
+
+			<input type="button" onclick="ExibirQuadroTipoProdutos()" id="btn_Ir_Para_Tipo_Produtosid" value="Ir para tipo de produto(s)"/>
+
+			<div id="divSeparaTipoProdutosid"></div>
+
+
+		<div id="pQuadroConnectorNFeCTeMDFeid">
+			<label>eForms NF-e / CT-e / MDF-e</label> </p>
+			<label id="eForms_NFeLabelid"><input type="checkbox" onclick="" id="eForms_NFeid" name="eFormsNFe"/> Emissão NF-e</label>
+        <label id="eForms_Entry_NFeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_NFeid" name="eFormsEntryNFe"/> Entrada de NF-e </label> </p>
+        <label id="eForms_CTeLabelid"><input type="checkbox" onclick="" id="eForms_CTeid" name="eFormsCTe"/> Emissão de CT-e </label> 			       	
+  			<label id="eForms_EntryCTeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_CTeid" name="eFormsCTe"/> Entrada de CT-e </label> </p>
+  			<label id="eForms_MDFeLabelid"><input type="checkbox" onclick="" id="eForms_MDFeid" name="eFormsEntryNFe"/> Emissão de MDF-e </label>       	
+  			<label id="eForms_EntryMDFeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_MDFeid" name="eFormsCTe"/> Entrada de MDF-e </label> </p>
+  			<input type="button" onclick="VoltarSelecaoProdutos()" id="btn_Voltar_Selecao_Produtosid" value="Voltar para a seleção de produtos"/>
+  			<input type="button" onclick="IrParaVolumetrias()" id="btn_Ir_Volumetriasid" value="Ir para volumetrias"/>
+  			<div id="divSeparaVolumetriaCimaid"></div>
+      
+
+    <div id="divQuadroVolumetriaEmiid">
+  		<div id="divLabelVolumetriaEmiid">
+  			<label>Emissões Mês </label> </p>
+  		</div> 
+        <div id="divVolumetriaEmiNFeid" >
+                NF-e: <input type="text" id="VolumetriaEmiNFeid" required="required" name="volumetriaEmiNFe"/> </p>
+          </div>
+        <div id="divVolumetriaEmiCTeid">
+                CT-e: <input type="text" id="VolumetriaEmiCTeid" required="required" name="volumetriaEmiCTe" /> </p>
+          </div> 
+        <div id="divVolumetriaEmiMDFeid">
+                MDF-e: <input type="text" id="VolumetriaEmiMDFeid" required="required" name="volumetriaEmiMDFe" /> </p>
+           </div>
+    </div>   
+    
+    <div id="divSeparaVolumetriaEmiid"></div>
+
+    <div id="divQuadroVolumetriaEntid">
+      <div id="divLabelVolumetriaEntid">
+          <label>Entradas Mês </label> </p>
+      </div>     		
+          <div id="divVolumetriaEntNFeid">
+                  NF-e: <input type="text" id="VolumetriaEntNFeid" required="required" name="volumetriaEntNFe" /> </p>
+          </div>        
+          <div id="divVolumetriaEntCTeid">
+                  CT-e: <input type="text" id="VolumetriaEntCTeid" required="required" name="volumetriaEntCTe" /> </p>
+          </div>          
+          <div id="divVolumetriaEntMDFeid"> 
+                  MDF-e: <input type="text" id="VolumetriaEntMDFeid" required="required" name="volumetriaEntMDFe" /> </p>
+          </div>           
+      </div>  
+      
+      
+
+		<div id="divQtdeCNPJRaizid">	
+            <label for="CNPJRaiz">Qtde. CNPJ Raiz:
+            	<input type="text" id="CNPJRaizid" required="required" name="CNPJRaiz"/>
+            </label>
+		</div>
+			
+		<div id="divQtdeCNPJFilialid">	
+            <label for="CNPJFilial">Qtde. CNPJ Filial:
+            	<input type="text" id="CNPJFilialid" required="required" name="CNPJFilial"/>
+         	</label>
+		</div>
+		</div>
+		
+		<div id="pQuadroAmbientesid">
+			<label>Informações De Ambiente</label> </p>
+			<div id="divAmbientesid">
+				<input type="checkbox" onclick="desabilitarInLoco()" id="DataCenterid" name="DataCenter"/> DataCenter 
+  				<input type="checkbox" onclick="desabilitarDC()" id="InLocoid" name="InLoco"/> In-Loco</p>
+				<div id="divQtdeAgentDCid">
+            		<label for="AgentDC">Qtde. Agent DC:
+            		<input type="text" id="QtdeAgentDCid" required="required" name="AgentDC"/>
+             		</label>
+             	<div id="CheckAgentCentralizadoid">
+					<input type="checkbox" onclick="desabilitarQtdeAgentDC()" id="AgentDCid" name="AgentDC"/> e-Agent DC Centralizado na Matriz</p>
+				</div>
+				</div>  				
+			</div>
+		</div>
+
+		<div id="divBotoesid">
+            <input type="button" onclick="EnviarDC();" id="btn_Enviar_ValidacaoDCid" value="Gerar Extrato DC"/> 
+            <input type="button" onclick="EnviarInLoco();" id="btn_Enviar_ValidacaoInLocoid" value="Gerar Extrato InLoco"/> 
+
+			<input type="button" onclick="tableCreate();" id="btntabela" value="tabela"/> 
+		</div>
+    </form>
+</body>
+</html>
