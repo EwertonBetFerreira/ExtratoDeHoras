@@ -121,7 +121,7 @@ function ExibirQuadroTipoProdutos(){
     if (document.getElementById('NFeid').checked == false && document.getElementById('CTeid').checked == false && document.getElementById('MDFeid').checked == false){
        alert ("Selecione pelo menos 1 produto !");
             }else{
-    document.getElementById('pQuadroConnectorNFeCTeMDFeid').style.display='block';
+    document.getElementById('pQuadroConnectorNFeCTeMDFeid').style.display='table';
     document.getElementById('NFeid').disabled = true;
     document.getElementById('CTeid').disabled = true;
     document.getElementById('MDFeid').disabled = true;
@@ -201,6 +201,7 @@ function ExibirMDFe(){
             }
 };
 
+/*VOLTAR PARA A EDIÇÃO DA SELEÇÃO DE PRODUTOS E ZERA OS DADOS QUE FORAM MARCADOS NOS TIPOS DE PRODUTOS*/
 function VoltarSelecaoProdutos(){
     document.getElementById('pQuadroConnectorNFeCTeMDFeid').style.display='none';
     document.getElementById('pQuadroAmbientesid').style.display='none';
@@ -237,50 +238,123 @@ function VoltarSelecaoProdutos(){
     document.getElementById('QtdeAgentDCid').disabled = false;
 };
 
+/*EXIBE O QUADRO PARA INFORMAR AS VOLUMETRIAS*/
 function IrParaVolumetrias(){
+
+    /*VERIFICA SE PELO MENOS 1 CHECKBOX FOI SELECIONADO*/
     if (document.getElementById('eForms_NFeid').checked == false && document.getElementById('eForms_Entry_NFeid').checked == false
      && document.getElementById('eForms_CTeid').checked == false && document.getElementById('eForms_Entry_CTeid').checked == false 
      && document.getElementById('eForms_MDFeid').checked == false && document.getElementById('eForms_Entry_MDFeid').checked == false)
     {
        alert ("Selecione pelo menos 1 tipo de produto !");
+            /*MONTA O QUADRO DE VOLUMETRIAS*/
             }else{
+                  /*DESABILITA OS BOTÕES DE VOLTAR PARA SELAÇAO DE PRODUTOS E IR PARA VOLUMETRIAS*/
+                document.getElementById('btn_Voltar_Selecao_Produtosid').disabled = true;
+                document.getElementById('btn_Ir_Volumetriasid').disabled = true;
+                /*DESABILITA OS CHECKS DE TIPOS DE PRODUTO*/
                 document.getElementById('eForms_NFeid').disabled=true;
                 document.getElementById('eForms_Entry_NFeid').disabled=true;
                 document.getElementById('eForms_CTeid').disabled=true;
                 document.getElementById('eForms_Entry_CTeid').disabled=true;
                 document.getElementById('eForms_MDFeid').disabled=true;
                 document.getElementById('eForms_Entry_MDFeid').disabled=true;
-                /*document.getElementById('divSeparaVolumetriaEmiid').style.display='block';*/
-                
-    if (document.getElementById('eForms_NFeid').checked == true) {
-        document.getElementById('divLabelVolumetriaEmiid').style.display='inline';
-        document.getElementById('divVolumetriaEmiNFeid').style.display='inline';
-    } 
-    if (document.getElementById('eForms_Entry_NFeid').checked == true){
-        document.getElementById('divLabelVolumetriaEmiid').style.display='inline';
-        document.getElementById('divVolumetriaEntNFeid').style.display='inline';
-    }
-    if (document.getElementById('eForms_CTeid').checked == true){
-        document.getElementById('divLabelVolumetriaEmiid').style.display='inline';
-        document.getElementById('divVolumetriaEmiCTeid').style.display='inline';   
-    } 
-    if (document.getElementById('eForms_Entry_CTeid').checked == true){
-        document.getElementById('divLabelVolumetriaEntid').style.display='inline';
-        document.getElementById('divVolumetriaEntCTeid').style.display='inline';
-    } 
-    if (document.getElementById('eForms_MDFeid').checked == true){
-        document.getElementById('divLabelVolumetriaEmiid').style.display='inline';
-        document.getElementById('divVolumetriaEmiMDFeid').style.display='inline';
-    } 
-    if (document.getElementById('eForms_Entry_MDFeid').checked == true){
-        document.getElementById('divLabelVolumetriaEntid').style.display='inline';
-        document.getElementById('divVolumetriaEntMDFeid').style.display='inline';
-    }   
 
+                /*MOSTRA OS DOIS QUADROS O DE EMISSÃO E O DE ENTRADA*/
+                document.getElementById('divQuadroVolumetriaEmiid').style.visibility='visible';
+                document.getElementById('divQuadroVolumetriaEntid').style.visibility='visible';
+                document.getElementById('divLabelVolumetriaEmiid').style.visibility='visible';
+                document.getElementById('divVolumetriaEmiNFeid').style.visibility='visible';
+                document.getElementById('divLabelVolumetriaEntid').style.visibility='visible';
+                document.getElementById('divVolumetriaEntNFeid').style.visibility='visible';
+                document.getElementById('divVolumetriaEmiCTeid').style.visibility='visible';
+                document.getElementById('divVolumetriaEntCTeid').style.visibility='visible'; 
+                document.getElementById('divVolumetriaEmiMDFeid').style.visibility='visible';
+                document.getElementById('divVolumetriaEntMDFeid').style.visibility='visible';
+     
+                  /*VERIFICA QUAIS INPUTS DEVE HABILITAR PARA O USUÁRIO PREENCHER DE ACORDO COM OS CHECKS DO TIPO DE PRODUTO*/            
+                  if (document.getElementById('eForms_NFeid').checked == true) {
+                      document.getElementById('VolumetriaEmiNFeid').disabled=false;
+                  }else{
+                      document.getElementById('VolumetriaEmiNFeid').disabled=true;
+                  }
+                  if (document.getElementById('eForms_Entry_NFeid').checked == true){
+                      document.getElementById('VolumetriaEntNFeid').disabled=false;        
+                  }else{
+                      document.getElementById('VolumetriaEntNFeid').disabled=true;        
+                  }
+                  if (document.getElementById('eForms_CTeid').checked == true){
+                      document.getElementById('VolumetriaEmiCTeid').disabled=false;  
+                  }else{
+                    document.getElementById('VolumetriaEmiCTeid').disabled=true;  
+                  }
+                  if (document.getElementById('eForms_Entry_CTeid').checked == true){
+                      document.getElementById('VolumetriaEntCTeid').disabled=false;        
+                  }else{
+                      document.getElementById('VolumetriaEntCTeid').disabled=true;        
+                  } 
+                  if (document.getElementById('eForms_MDFeid').checked == true){
+                      document.getElementById('VolumetriaEmiMDFeid').disabled=false;        
+                  }else{
+                      document.getElementById('VolumetriaEmiMDFeid').disabled=true;        
+                  }
+                  if (document.getElementById('eForms_Entry_MDFeid').checked == true){        
+                      document.getElementById('VolumetriaEntMDFeid').disabled=false;     
+                  }else{
+                      document.getElementById('VolumetriaEntMDFeid').disabled=true;     
+                  }   
+                  document.getElementById('btn_Voltar_Tipo_Produtosid').style.display='inline';
+                  document.getElementById('btn_Ir_Para_Ambienteid').style.display='inline';
     } 
 };
 
+/*VOLTA PARA A EDIÇÃO DOS TIPOS DE PRODUTOS E ZERA OS DADOS QUE FORAM PREENCHIDOS NAS VOLUMETRIAS*/
+function VoltarTipoProdutos(){
+  document.getElementById('VolumetriaEmiNFeid').value='';
+  document.getElementById('VolumetriaEmiCTeid').value='';
+  document.getElementById('VolumetriaEmiMDFeid').value='';
+  document.getElementById('VolumetriaEntNFeid').value='';
+  document.getElementById('VolumetriaEntCTeid').value='';
+  document.getElementById('VolumetriaEntMDFeid').value='';
+  document.getElementById('divQuadroVolumetriaEmiid').style.visibility='hidden';
+  document.getElementById('divQuadroVolumetriaEntid').style.visibility='hidden';
+  document.getElementById('divLabelVolumetriaEmiid').style.visibility='hidden';
+  document.getElementById('divVolumetriaEmiNFeid').style.visibility='hidden';
+  document.getElementById('divLabelVolumetriaEntid').style.visibility='hidden';
+  document.getElementById('divVolumetriaEntNFeid').style.visibility='hidden';
+  document.getElementById('divVolumetriaEmiCTeid').style.visibility='hidden';
+  document.getElementById('divVolumetriaEntCTeid').style.visibility='hidden'; 
+  document.getElementById('divVolumetriaEmiMDFeid').style.visibility='hidden';
+  document.getElementById('divVolumetriaEntMDFeid').style.visibility='hidden';  
+  document.getElementById('btn_Voltar_Selecao_Produtosid').disabled = false;
+  document.getElementById('btn_Ir_Volumetriasid').disabled = false; 
+  document.getElementById('eForms_NFeid').disabled=false;
+  document.getElementById('eForms_Entry_NFeid').disabled=false;
+  document.getElementById('eForms_CTeid').disabled=false;
+  document.getElementById('eForms_Entry_CTeid').disabled=false;
+  document.getElementById('eForms_MDFeid').disabled=false;
+  document.getElementById('eForms_Entry_MDFeid').disabled=false; 
+}
 
+function IrParaAmbiente(){
+  document.getElementById('pQuadroAmbientesid').style.display='block';
+  document.getElementById('divAmbientesid').style.display='block';
+  document.getElementById('divQtdeAgentDCid').style.display='block';
+  document.getElementById('CheckAgentCentralizadoid').style.display='block';
+  document.getElementById('divBotoesGerarExtratoid').style.display='block';
+  document.getElementById('divQtdeCNPJRaizid').style.display='block';
+  document.getElementById('divQtdeCNPJFilialid').style.display='block';
+  document.getElementById('divQtdeAgentDCid').style.display='block';
+  
+  
+  
+  
+  
+  
+  
+}
+
+/*MONTA A TABELA DO EXTRATO DE HORAS*/
 function tableCreate() {
   var body = document.getElementsByTagName('body')[0];
   var tbl = document.createElement('table');

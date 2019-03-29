@@ -44,44 +44,47 @@ div#pQuadroAmbientesid{
   margin-bottom: 10px;
 }
 
+
+
 div#divQuadroVolumetriaEmiid{
+    visibility: hidden;
     text-align: right;
-    margin-right: 180px;
+    margin-right: 50%;
+    margin-left: 5%;
+    float: left;
+}
+
+div#divQuadroVolumetriaEntid{
+    visibility: hidden;
+    text-align: right;
+    margin-right: 10%;
+    margin-left: 40%;
+    float: right;   
 }
 
 div#divLabelVolumetriaEmiid{
-    display: none;
+    visibility: hidden;
     margin-bottom: 2%;
-    margin-top: 35px;
-    float: left;
+    margin-top: 8%;
     margin-left: 5px;
 }
 
 div#divLabelVolumetriaEntid{
-    display: none;
-    margin-top: -108px;
-    margin-bottom: 2%;
-    margin-right: 258px;
+    visibility: hidden;
+    margin-top: -85%;
 }
 
 div#divVolumetriaEmiNFeid{
-    display: none;
-    text-align: right;
-
-    margin-bottom: 1%;
-    
+    visibility: hidden;
 }
 
 input#VolumetriaEmiNFeid{
     width: 90px;
+    
 }
 
 div#divVolumetriaEmiCTeid{
-    display: none;
-    text-align: right;
-
-    margin-bottom: 1%;
-    
+    visibility: hidden;  
 }
 
 input#VolumetriaEmiCTeid{
@@ -89,11 +92,7 @@ input#VolumetriaEmiCTeid{
 }
 
 div#divVolumetriaEmiMDFeid{
-    display: none;
-    text-align: right;
-
-    margin-bottom: 3%;
-    
+    visibility: hidden;  
 }
 
 input#VolumetriaEmiMDFeid{
@@ -115,10 +114,7 @@ div#divSeparaVolumetriaEmiid{
 }
 
 div#divVolumetriaEntNFeid{
-    display: none;
-    text-align: right;
-
-    margin-bottom: 5px;
+    visibility: hidden;
 }
 
 input#VolumetriaEntNFeid{
@@ -126,10 +122,7 @@ input#VolumetriaEntNFeid{
 }
 
 div#divVolumetriaEntCTeid{
-    display: none;
-    text-align: right;
-
-    margin-bottom: 5px;
+    visibility: hidden;
 }
 
 input#VolumetriaEntCTeid{
@@ -137,10 +130,7 @@ input#VolumetriaEntCTeid{
 }
 
 div#divVolumetriaEntMDFeid{
-    display: none;
-    text-align: right;
-
-    margin-bottom: 25px;
+    visibility: hidden;
 }
 
 input#VolumetriaEntMDFeid{
@@ -182,11 +172,6 @@ div#divAmbientesid{
     margin-left: 5px;
 }
 
-div#divBotoesid{
-    display: none;
-    margin-bottom: 10px;
-}
-
 div#divSeparaTipoProdutosid{
     border-style: solid;
     border-width: 1px;
@@ -202,8 +187,8 @@ div#divSeparaVolumetriaCimaid{
     border-width: 1px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
     border-color: #000000;
 }
 
@@ -217,10 +202,55 @@ display: inline-block;
 padding-left: 10px;
 }
 
-input[type=button] {
+/*BOTÕES*/
+input[type=button]#btn_Ir_Para_Tipo_Produtosid{
     color:#08233e;
     font-size:100%;
-    /* ... other rules ... */
+    margin-left: 2%;
+    margin-bottom: 1%;
+    cursor:pointer;
+}
+
+input[type=button]#btn_Voltar_Selecao_Produtosid{
+    color:#08233e;
+    font-size:100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    cursor:pointer;
+}
+
+input[type=button]#btn_Ir_Volumetriasid{
+    color:#08233e;
+    font-size:100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    cursor:pointer;
+}
+
+input[type=button]#btn_Voltar_Tipo_Produtosid{
+    color:#08233e;
+    font-size:100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    cursor:pointer;
+    display: none;
+}
+
+input[type=button]#btn_Ir_Para_Ambienteid{
+    color:#08233e;
+    font-size:100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    cursor:pointer;
+    display: none;
+}
+
+div#divBotoesGerarExtratoid{
+    display: none;
+    color:#08233e;
+    font-size:100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
     cursor:pointer;
 }
 

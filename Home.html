@@ -20,8 +20,9 @@
 			<input type="checkbox" onclick="" id="NFCeid" name="NFCe"/> NFC-e
 			<input type="checkbox" onclick="" id="REINFid" name="REINF"/> REINF </p>
 
+			<div id="divBotoesIrTipoProdutosid">
 			<input type="button" onclick="ExibirQuadroTipoProdutos()" id="btn_Ir_Para_Tipo_Produtosid" value="Ir para tipo de produto(s)"/>
-
+			</div>
 			<div id="divSeparaTipoProdutosid"></div>
 
 
@@ -33,8 +34,10 @@
   			<label id="eForms_EntryCTeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_CTeid" name="eFormsCTe"/> Entrada de CT-e </label> </p>
   			<label id="eForms_MDFeLabelid"><input type="checkbox" onclick="" id="eForms_MDFeid" name="eFormsEntryNFe"/> Emissão de MDF-e </label>       	
   			<label id="eForms_EntryMDFeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_MDFeid" name="eFormsCTe"/> Entrada de MDF-e </label> </p>
-  			<input type="button" onclick="VoltarSelecaoProdutos()" id="btn_Voltar_Selecao_Produtosid" value="Voltar para a seleção de produtos"/>
-  			<input type="button" onclick="IrParaVolumetrias()" id="btn_Ir_Volumetriasid" value="Ir para volumetrias"/>
+				<div id="divBotoesIrVolumetriasid">
+				<input type="button" onclick="VoltarSelecaoProdutos()" id="btn_Voltar_Selecao_Produtosid" value="Voltar para a seleção de produtos"/>
+				<input type="button" onclick="IrParaVolumetrias()" id="btn_Ir_Volumetriasid" value="Ir para volumetrias"/>
+				</div>
   			<div id="divSeparaVolumetriaCimaid"></div>
       
 
@@ -43,13 +46,13 @@
   			<label>Emissões Mês </label> </p>
   		</div> 
         <div id="divVolumetriaEmiNFeid" >
-                NF-e: <input type="text" id="VolumetriaEmiNFeid" required="required" name="volumetriaEmiNFe"/> </p>
+                NF-e: <input type="text" id="VolumetriaEmiNFeid" required="required" name="volumetriaEmiNFe" disabled/> </p>
           </div>
         <div id="divVolumetriaEmiCTeid">
-                CT-e: <input type="text" id="VolumetriaEmiCTeid" required="required" name="volumetriaEmiCTe" /> </p>
+                CT-e: <input type="text" id="VolumetriaEmiCTeid" required="required" name="volumetriaEmiCTe" disabled/> </p>
           </div> 
         <div id="divVolumetriaEmiMDFeid">
-                MDF-e: <input type="text" id="VolumetriaEmiMDFeid" required="required" name="volumetriaEmiMDFe" /> </p>
+                MDF-e: <input type="text" id="VolumetriaEmiMDFeid" required="required" name="volumetriaEmiMDFe" disabled/> </p>
            </div>
     </div>   
     
@@ -60,37 +63,38 @@
           <label>Entradas Mês </label> </p>
       </div>     		
           <div id="divVolumetriaEntNFeid">
-                  NF-e: <input type="text" id="VolumetriaEntNFeid" required="required" name="volumetriaEntNFe" /> </p>
+                  NF-e: <input type="text" id="VolumetriaEntNFeid" required="required" name="volumetriaEntNFe" disabled/> </p>
           </div>        
           <div id="divVolumetriaEntCTeid">
-                  CT-e: <input type="text" id="VolumetriaEntCTeid" required="required" name="volumetriaEntCTe" /> </p>
+                  CT-e: <input type="text" id="VolumetriaEntCTeid" required="required" name="volumetriaEntCTe" disabled/> </p>
           </div>          
           <div id="divVolumetriaEntMDFeid"> 
-                  MDF-e: <input type="text" id="VolumetriaEntMDFeid" required="required" name="volumetriaEntMDFe" /> </p>
+                  MDF-e: <input type="text" id="VolumetriaEntMDFeid" required="required" name="volumetriaEntMDFe" disabled/> </p>
           </div>           
-      </div>  
-      
-      
-
-		<div id="divQtdeCNPJRaizid">	
-            <label for="CNPJRaiz">Qtde. CNPJ Raiz:
-            	<input type="text" id="CNPJRaizid" required="required" name="CNPJRaiz"/>
-            </label>
-		</div>
+      </div>    
 			
-		<div id="divQtdeCNPJFilialid">	
-            <label for="CNPJFilial">Qtde. CNPJ Filial:
-            	<input type="text" id="CNPJFilialid" required="required" name="CNPJFilial"/>
-         	</label>
-		</div>
+			<div id="divBotoesIrAmbienteid">
+			<input type="button" onclick="VoltarTipoProdutos()" id="btn_Voltar_Tipo_Produtosid" value="Voltar para tipo de produtos"/>
+			<input type="button" onclick="IrParaAmbiente()" id="btn_Ir_Para_Ambienteid" value="Ir para dados de ambiente"/>
+			</div>
 		</div>
 		
 		<div id="pQuadroAmbientesid">
 			<label>Informações De Ambiente</label> </p>
 			<div id="divAmbientesid">
 				<input type="checkbox" onclick="desabilitarInLoco()" id="DataCenterid" name="DataCenter"/> DataCenter 
-  				<input type="checkbox" onclick="desabilitarDC()" id="InLocoid" name="InLoco"/> In-Loco</p>
-				<div id="divQtdeAgentDCid">
+					<input type="checkbox" onclick="desabilitarDC()" id="InLocoid" name="InLoco"/> In-Loco</p>
+					<div id="divQtdeCNPJRaizid">	
+            <label for="CNPJRaiz">Qtde. CNPJ Raiz:
+            	<input type="text" id="CNPJRaizid" required="required" name="CNPJRaiz"/>
+            </label>
+						</div>			
+						<div id="divQtdeCNPJFilialid">	
+            <label for="CNPJFilial">Qtde. CNPJ Filial:
+            	<input type="text" id="CNPJFilialid" required="required" name="CNPJFilial"/>
+         	</label>
+						</div>					
+						<div id="divQtdeAgentDCid">
             		<label for="AgentDC">Qtde. Agent DC:
             		<input type="text" id="QtdeAgentDCid" required="required" name="AgentDC"/>
              		</label>
@@ -101,7 +105,7 @@
 			</div>
 		</div>
 
-		<div id="divBotoesid">
+		<div id="divBotoesGerarExtratoid">
             <input type="button" onclick="EnviarDC();" id="btn_Enviar_ValidacaoDCid" value="Gerar Extrato DC"/> 
             <input type="button" onclick="EnviarInLoco();" id="btn_Enviar_ValidacaoInLocoid" value="Gerar Extrato InLoco"/> 
 
