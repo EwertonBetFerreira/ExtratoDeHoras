@@ -41,7 +41,7 @@ div#pQuadroAmbientesid{
   margin-bottom: 10px;
   margin: auto;
   width: 30%;
-  margin-bottom: 10px;
+  text-align: right;
 }
 
 
@@ -137,30 +137,38 @@ input#VolumetriaEntMDFeid{
     width: 90px;
 }
 
+div#divLabelInformacaoAmbiente{
+    margin-right: 25%;
+}
+
+div#divCheckAmbiente{
+    margin-right: 10%;
+}
+
 div#divQtdeAgentDCid{
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 5%;
+}
+
+div#divQtdeCNPJRaizid{
+    display: none;
+    margin-bottom: 10px;
+    margin-right: 5%;    
+}
+
+div#divQtdeCNPJFilialid{
+    display: none;
+    margin-bottom: 10px;
+    margin-right: 5%;    
 }
 
 div#CheckAgentCentralizadoid{
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-div#divQtdeCNPJRaizid{
-    display: none;
-    margin-bottom: 10px;
-    text-align: right;
-    margin-right: 100px;
-}
-
-div#divQtdeCNPJFilialid{
-    display: none;
-    margin-bottom: 10px;
-    text-align: right;
-    margin-right: 100px;
+    margin-right: -10%;
 }
 
 div#divAmbientesid{
@@ -168,7 +176,7 @@ div#divAmbientesid{
     margin-top: 10px;
     display: none;
     margin-bottom: 10px;
-    margin-right: 5px;
+    margin-right: 15%;
     margin-left: 5px;
 }
 
