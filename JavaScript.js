@@ -344,7 +344,7 @@ function IrParaAmbiente(){
   document.getElementById('divBotoesGerarExtratoid').style.display='block';
   document.getElementById('divQtdeCNPJRaizid').style.display='block';
   document.getElementById('divQtdeCNPJFilialid').style.display='block';
-  document.getElementById('divQtdeAgentDCid').style.display='block';
+  document.getElementById('divQtdeAgentDCid').style.display='block'; 
   
   
   
