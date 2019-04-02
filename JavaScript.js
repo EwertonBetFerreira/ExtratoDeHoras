@@ -311,9 +311,9 @@ function VoltarTipoProdutos(){
   document.getElementById('divVolumetriaEntMDFeid').style.visibility='hidden';  
   document.getElementById('btn_Voltar_Selecao_ProdutosNFeCTeMDFeid').disabled = false;
   document.getElementById('btn_Ir_Volumetriasid').disabled = false; 
-  document.getElementById('eForms_NFeid').disabled=false;
   document.getElementById('btn_Voltar_Tipo_Produtosid').style.display = 'none'; 
   document.getElementById('btn_Ir_Para_CNPJid').style.display = 'none'; 
+  document.getElementById('eForms_NFeid').disabled=false;
   document.getElementById('eForms_Entry_NFeid').disabled=false;
   document.getElementById('eForms_CTeid').disabled=false;
   document.getElementById('eForms_Entry_CTeid').disabled=false;
@@ -328,10 +328,13 @@ function VoltarTipoProdutos(){
 }
 
 function IrParaCNPJ(){
-  if (document.getElementById('VolumetriaEmiNFeid').value =='' && (document.getElementById('VolumetriaEmiCTeid').value =='') &&
-  (document.getElementById('VolumetriaEmiMDFeid').value =='') && (document.getElementById('VolumetriaEntNFeid').value =='') &&
-  (document.getElementById('VolumetriaEntCTeid').value =='') && (document.getElementById('VolumetriaEntMDFeid').value =='')){
-    alert ("Preencha a volumetria dos produtos selecionados !");
+   if((document.getElementById('eForms_NFeid').enabled=true && document.getElementById('VolumetriaEmiNFeid').value =='') ||
+     (document.getElementById('eForms_Entry_NFeid').enabled=true && document.getElementById('VolumetriaEntNFeid').value =='') ||
+     (document.getElementById('eForms_CTeid').enabled=true && document.getElementById('VolumetriaEmiCTeid').value =='') ||
+     (document.getElementById('eForms_Entry_CTeid').enabled=true && document.getElementById('VolumetriaEntCTeid').value =='' ||
+     (document.getElementById('eForms_MDFeid').enabled=true && document.getElementById('VolumetriaEmiMDFeid').value =='') || 
+     (document.getElementById('eForms_Entry_MDFeid').enabled=true) && document.getElementById('VolumetriaEntMDFeid').value =='')){
+      alert ("Preencha a volumetria dos produtos selecionados !");
   }else{
   document.getElementById('divQtdeCNPJRaizid').style.display='block';
   document.getElementById('divQtdeCNPJFilialid').style.display='block';
@@ -365,6 +368,8 @@ function VoltarVolumetria(){
   document.getElementById('VolumetriaEntMDFeid').readOnly = false;
   document.getElementById('btn_Ir_Para_CNPJid').disabled= false;
   document.getElementById('btn_Voltar_Tipo_Produtosid').disabled= false;
+  document.getElementById('CNPJRaizid').readOnly = false;
+  document.getElementById('CNPJFilialid').readOnly = false;
 
 }
 
