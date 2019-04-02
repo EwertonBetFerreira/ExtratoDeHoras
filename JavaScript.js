@@ -328,12 +328,12 @@ function VoltarTipoProdutos(){
 }
 
 function IrParaCNPJ(){
-   if((document.getElementById('eForms_NFeid').enabled=true && document.getElementById('VolumetriaEmiNFeid').value =='') ||
-     (document.getElementById('eForms_Entry_NFeid').enabled=true && document.getElementById('VolumetriaEntNFeid').value =='') ||
-     (document.getElementById('eForms_CTeid').enabled=true && document.getElementById('VolumetriaEmiCTeid').value =='') ||
-     (document.getElementById('eForms_Entry_CTeid').enabled=true && document.getElementById('VolumetriaEntCTeid').value =='' ||
-     (document.getElementById('eForms_MDFeid').enabled=true && document.getElementById('VolumetriaEmiMDFeid').value =='') || 
-     (document.getElementById('eForms_Entry_MDFeid').enabled=true) && document.getElementById('VolumetriaEntMDFeid').value =='')){
+   if((document.getElementById('VolumetriaEmiNFeid').enabled=true && document.getElementById('VolumetriaEmiNFeid').value =='') ||
+     (document.getElementById('VolumetriaEntNFeid').enabled=true && document.getElementById('VolumetriaEntNFeid').value =='') ||
+     (document.getElementById('VolumetriaEmiCTeid').enabled=true && document.getElementById('VolumetriaEmiCTeid').value =='') ||
+     (document.getElementById('VolumetriaEntCTeid').enabled=true && document.getElementById('VolumetriaEntCTeid').value =='' ||
+     (document.getElementById('VolumetriaEmiMDFeid').enabled=true && document.getElementById('VolumetriaEmiMDFeid').value =='') || 
+     (document.getElementById('VolumetriaEntMDFeid').enabled=true) && document.getElementById('VolumetriaEntMDFeid').value =='')){
       alert ("Preencha a volumetria dos produtos selecionados !");
   }else{
   document.getElementById('divQtdeCNPJRaizid').style.display='block';
