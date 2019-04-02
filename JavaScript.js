@@ -257,6 +257,7 @@ function IrParaVolumetrias(){
                   /*VERIFICA QUAIS INPUTS DEVE HABILITAR PARA O USUÁRIO PREENCHER DE ACORDO COM OS CHECKS DO TIPO DE PRODUTO*/            
                   if (document.getElementById('eForms_NFeid').checked == true) {
                       document.getElementById('VolumetriaEmiNFeid').disabled=false;
+                      document.getElementById('VolumetriaEmiNFeid').name='true';
                   }else{
                       document.getElementById('VolumetriaEmiNFeid').disabled=true;
                   }
@@ -328,12 +329,13 @@ function VoltarTipoProdutos(){
 }
 
 function IrParaCNPJ(){
-   if((document.getElementById('VolumetriaEmiNFeid').enabled=true && document.getElementById('VolumetriaEmiNFeid').value =='') ||
-     (document.getElementById('VolumetriaEntNFeid').enabled=true && document.getElementById('VolumetriaEntNFeid').value =='') ||
-     (document.getElementById('VolumetriaEmiCTeid').enabled=true && document.getElementById('VolumetriaEmiCTeid').value =='') ||
-     (document.getElementById('VolumetriaEntCTeid').enabled=true && document.getElementById('VolumetriaEntCTeid').value =='' ||
-     (document.getElementById('VolumetriaEmiMDFeid').enabled=true && document.getElementById('VolumetriaEmiMDFeid').value =='') || 
-     (document.getElementById('VolumetriaEntMDFeid').enabled=true) && document.getElementById('VolumetriaEntMDFeid').value =='')){
+   if((document.getElementById('VolumetriaEmiNFeid').disabled == false && document.getElementById('VolumetriaEmiNFeid').value =='') ||
+     (document.getElementById('VolumetriaEntNFeid').disabled == false && document.getElementById('VolumetriaEntNFeid').value =='') ||
+     (document.getElementById('VolumetriaEmiCTeid').disabled == false && document.getElementById('VolumetriaEmiCTeid').value =='') ||
+     (document.getElementById('VolumetriaEntCTeid').disabled == false && document.getElementById('VolumetriaEntCTeid').value =='') ||
+     (document.getElementById('VolumetriaEmiMDFeid').disabled == false && document.getElementById('VolumetriaEmiMDFeid').value =='') || 
+     (document.getElementById('VolumetriaEntMDFeid').disabled == false && document.getElementById('VolumetriaEntMDFeid').value ==''))
+  {
       alert ("Preencha a volumetria dos produtos selecionados !");
   }else{
   document.getElementById('divQtdeCNPJRaizid').style.display='block';
