@@ -28,16 +28,27 @@ div#pQuadroConnectorNFeCTeMDFeid{
   margin-left: 10px;
   margin-right: 600px;
   margin-bottom: 10px;
-  text-align: center;
-  align-content: right;
-  min-width: 100px;
-  max-width: 500px;
-  min-height: 100px;
-  max-height: 500px;
+  text-align: left;
   font-weight: bold;
   display: none;
   border-color: #4f4f4f;
 }
+
+div#divQuadroCabecalhoid{
+    border-style: solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-content: right;
+    min-width: 98%;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 500px;
+    font-weight: bold;
+    
+    border-color: #4f4f4f;
+  }
 
 div#pQuadroAmbientesid{
   border-style: solid;
@@ -183,23 +194,25 @@ div#divSeparaTipoProdutosid{
 }
 
 div#divSeparaTipoVolumetriaid{
+    display: none;
     border-style: solid;
     border-width: 1px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 1%;
     margin-bottom: 1%;
-    border-color: #000000;
+    border-color: #4f4f4f;
 }
 
 div#divSeparaVolumetriaCNPJid{
+    display: none;
     border-style: solid;
     border-width: 1px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 1%;
     margin-bottom: 1%;
-    border-color: #000000;
+    border-color: #4f4f4f;
 }
 
 div#divQuadroCNPJid{
@@ -237,7 +250,7 @@ input[type=button]#btn_Ir_Para_Tipo_ProdutosNFeCTeMDFeid{
 input[type=button]#btn_Voltar_Selecao_ProdutosNFeCTeMDFeid{
     color:#08233e;
     font-size:100%;
-    margin-left: 2%;
+    margin-left: 25px;
     margin-bottom: 2%;
     cursor:pointer;
 }
@@ -253,8 +266,27 @@ input[type=button]#btn_Ir_Volumetriasid{
 input[type=button]#btn_Voltar_Tipo_Produtosid{
     color:#08233e;
     font-size:100%;
+    margin-left: 25px;
+    margin-bottom: 2%;
+    cursor:pointer;
+    display: none;
+}
+
+input[type=button]#btn_Ir_Para_CNPJid{
+    color:#08233e;
+    font-size:100%;
     margin-left: 2%;
     margin-bottom: 2%;
+    cursor:pointer;
+    display: none;
+}
+
+input[type=button]#btn_Voltar_Para_Volumetriaid{
+    color:#08233e;
+    font-size:100%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-left: 25px;
     cursor:pointer;
     display: none;
 }
@@ -278,23 +310,7 @@ input[type=button]#btn_Ir_Para_Ambienteid{
     display: none;
 }
 
-input[type=button]#btn_Ir_Para_CNPJid{
-    color:#08233e;
-    font-size:100%;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    cursor:pointer;
-    display: none;
-}
 
-input[type=button]#btn_Voltar_Para_Volumetriaid{
-    color:#08233e;
-    font-size:100%;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    cursor:pointer;
-    display: none;
-}
 
 
 
@@ -315,13 +331,18 @@ input[type=button]:disabled {
     opacity: 0.65;
 }
 
+label#Titulo_Quadro_eFormsLabelid{
+    margin-left: 25%;
+}
 
 label#eForms_NFeLabelid{
     display: none;
+    
 }
 
 label#eForms_Entry_NFeLabelid{
     display: none;
+    margin-left: 40px;
 }
 
 label#eForms_CTeLabelid{
@@ -330,6 +351,7 @@ label#eForms_CTeLabelid{
 
 label#eForms_EntryCTeLabelid{
     display: none;
+    margin-left: 15px;
 }
 
 label#eForms_MDFeLabelid{
@@ -338,6 +360,7 @@ label#eForms_MDFeLabelid{
 
 label#eForms_EntryMDFeLabelid{
     display: none;
+    margin-right: 10px;
 }
 
 

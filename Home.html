@@ -9,18 +9,18 @@
 	
 </head>
 <body>
-    <form name="meu_form">
+    <form>
+			<div id="divQuadroCabecalhoid">
         <h1>Preencha as Informações Abaixo</h1>
         <h2>Quais Produtos?</h2>
 			<div id="divBotoesIrTipoProdutosNFeCTeMDFeid">
 			<input type="button" onclick="ExibirQuadroTipoProdutosNFeCTeMDFe()" id="btn_Ir_Para_Tipo_ProdutosNFeCTeMDFeid" value="NF-e / CT-e / MDF-e"/>
 			</div>
-			<div id="divSeparaTipoProdutosid"></div>
-
+				</div>
 
 		<div id="pQuadroConnectorNFeCTeMDFeid">
-			<label>eForms NF-e / CT-e / MDF-e</label> </p>
-			<label id="eForms_NFeLabelid"><input type="checkbox" onclick="" id="eForms_NFeid" name="eFormsNFe"/> Emissão NF-e</label>
+				<label id="Titulo_Quadro_eFormsLabelid">eForms NF-e / CT-e / MDF-e</label> </p>
+				<label id="eForms_NFeLabelid"></label><input type="checkbox" onclick="" id="eForms_NFeid" name="eFormsNFe"/> Emissão NF-e</label>
         <label id="eForms_Entry_NFeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_NFeid" name="eFormsEntryNFe"/> Entrada de NF-e </label> </p>
         <label id="eForms_CTeLabelid"><input type="checkbox" onclick="" id="eForms_CTeid" name="eFormsCTe"/> Emissão de CT-e </label> 			       	
   			<label id="eForms_EntryCTeLabelid"><input type="checkbox" onclick="" id="eForms_Entry_CTeid" name="eFormsCTe"/> Entrada de CT-e </label> </p>
@@ -83,8 +83,9 @@
 		</div>
 			<input type="button" onclick="VoltarVolumetria()" id="btn_Voltar_Para_Volumetriaid" value="Voltar para Volumetrias"/>
 			<input type="button" onclick="FinalizarNFeCTeMDFe()" id="btn_Finalizar_NFeCTeMDFeid" value="Finalizar NF-e/CT-e/MDF-e"/>
-			<input type="button" onclick="IrParaAmbiente()" id="btn_Ir_Para_Ambienteid" value="Ir para dados de ambiente"/>
+			
 		</div>
+		<input type="button" onclick="IrParaAmbiente()" id="btn_Ir_Para_Ambienteid" value="Ir para dados de ambiente"/>
 		
 		
 

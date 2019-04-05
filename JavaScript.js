@@ -241,6 +241,7 @@ function IrParaVolumetrias(){
                 document.getElementById('eForms_Entry_CTeid').disabled=true;
                 document.getElementById('eForms_MDFeid').disabled=true;
                 document.getElementById('eForms_Entry_MDFeid').disabled=true;
+                document.getElementById("divSeparaTipoVolumetriaid").style.display='block';
 
                 /*MOSTRA OS DOIS QUADROS O DE EMISSÃO E O DE ENTRADA*/
                 document.getElementById('divQuadroVolumetriaEmiid').style.visibility='visible';
@@ -338,6 +339,7 @@ function IrParaCNPJ(){
   {
       alert ("Preencha a volumetria dos produtos selecionados !");
   }else{
+  document.getElementById("divSeparaVolumetriaCNPJid").style.display='block';    
   document.getElementById('divQtdeCNPJRaizid').style.display='block';
   document.getElementById('divQtdeCNPJFilialid').style.display='block';
   document.getElementById('VolumetriaEmiNFeid').readOnly = true;
