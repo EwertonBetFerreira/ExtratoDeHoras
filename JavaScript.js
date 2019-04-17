@@ -349,7 +349,7 @@ function IrParaCNPJ(){
   document.getElementById('VolumetriaEntCTeid').readOnly = true;
   document.getElementById('VolumetriaEntMDFeid').readOnly = true;  
   document.getElementById('btn_Finalizar_NFeCTeMDFeid').style.display='inline';
-  document.getElementById('btn_Ir_Para_Ambienteid').style.display='inline';
+  
   document.getElementById('btn_Voltar_Para_Volumetriaid').style.display='inline';
   document.getElementById('btn_Ir_Para_CNPJid').disabled= true;
   document.getElementById('btn_Voltar_Tipo_Produtosid').disabled= true;

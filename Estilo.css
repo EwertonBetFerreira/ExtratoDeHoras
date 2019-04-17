@@ -1,3 +1,7 @@
+head{
+    
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -18,9 +22,22 @@ form {
     
 }
  
+img#Logoid{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: -1350px;
+}
+
 h1 {
     margin-bottom: 20px;
     margin-left: 20px;
+    margin-top: -90px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: -20px;
 }
 
 div#pQuadroConnectorNFeCTeMDFeid{
@@ -46,7 +63,8 @@ div#divQuadroCabecalhoid{
     min-height: 100px;
     max-height: 500px;
     font-weight: bold;
-    
+    background-image: url("https://www.ndd.com.br/public/images/banner/bnr7.jpg");
+    background-position: top 100% left 100%;
     border-color: #4f4f4f;
   }
 
@@ -225,7 +243,7 @@ input[type=checkbox] {
     width: 50px;
     text-align: right;
 }
- 
+
 input[type=text] {
 display: inline-block;
 padding-left: 10px;
@@ -237,6 +255,15 @@ input[type=text]:read-only {
     cursor: not-allowed;
     opacity: 0.65;
 }
+
+input[type=text]:disabled {
+    background-color:#696969;
+    /* ... other rules ... */
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+
 
 /*BOTÕES*/
 input[type=button]#btn_Ir_Para_Tipo_ProdutosNFeCTeMDFeid{
@@ -366,27 +393,33 @@ label#eForms_EntryMDFeLabelid{
 
 
 table{
-    background: #ffc;
+    background: #2e8b57;
     font-family: Verdana,Tahoma,sans-serif;
     table-layout: fixed;
     max-width: 700px;
 }
 tr#tr1{
     font-weight: bold;
+    background: #000000;
 }
 tr#tr2{
     font-weight: bold;
+    background: #000000;
 }
 tr#tr4{
     font-weight: bold;
-    margin-left: 5px
+    margin-left: 5px;
+    background: #000000;
 }
 tr#tr10{
     font-weight: bold;
+    background: #000000;
 }
 tr#tr16{
     font-weight: bold;
+    background: #000000;
 }
 tr#tr17{
     font-weight: bold;
+    background: #000000;
 }
