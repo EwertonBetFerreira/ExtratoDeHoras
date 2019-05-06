@@ -406,6 +406,45 @@ function IrParaAmbiente(){
   }
 }
 
+/*EXTRAI DO HTML PARA O CSV*/
+function ExportCSV () {
+  var table = document.getElementById('TabelaExtrato').innerHTML;
+  var data = table.replace(/<thead>/g, '')
+                  .replace(/<\/thead>/g, '')
+                  .replace(/<tbody>/g, '')
+                  .replace(/<\/tbody>/g, '')
+                  .replace(/<tr>/g, '')
+                  .replace(/<\/tr>/g, '\r\n')
+                  .replace(/<tr id="tr1">/g, '')
+                  .replace(/<tr id="tr2">/g, '')
+                  .replace(/<tr id="tr3">/g, '')
+                  .replace(/<tr id="tr4">/g, '')
+                  .replace(/<tr id="tr5">/g, '')
+                  .replace(/<tr id="tr6">/g, '')
+                  .replace(/<tr id="tr7">/g, '')
+                  .replace(/<tr id="tr8">/g, '')
+                  .replace(/<tr id="tr9">/g, '')
+                  .replace(/<tr id="tr10">/g, '')
+                  .replace(/<tr id="tr11">/g, '')
+                  .replace(/<tr id="tr12">/g, '')
+                  .replace(/<tr id="tr13">/g, '')
+                  .replace(/<tr id="tr14">/g, '')
+                  .replace(/<tr id="tr15">/g, '')
+                  .replace(/<tr id="tr16">/g, '')
+                  .replace(/<tr id="tr17">/g, '')
+                  .replace(/<th>/g, '')
+                  .replace(/<\/th>/g, ';')
+                  .replace(/<td>/g, '')
+                  .replace(/<\/td>/g, ';')
+                  .replace(/\t/g, '')
+                  .replace(/\n/g, '')
+                  .replace(/&nbsp/gi, '');
+var mylink = document.createElement('a');
+mylink.download = "Extrato de Horas.csv";
+mylink.href = "data:application/csv," + escape(data);
+mylink.click();                  
+}
+
 
 /*MONTA A TABELA DO EXTRATO DE HORAS*/
 function tableCreate() {
@@ -413,6 +452,7 @@ function tableCreate() {
   var tbl = document.createElement('table');
   tbl.style.width = '100%';
   tbl.setAttribute('border', '1');
+  tbl.setAttribute('id', 'TabelaExtrato');
   var tbdy = document.createElement('tbody');
   for (var i = 0; i < 1; i++) {
     var tr = document.createElement('tr');
