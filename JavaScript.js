@@ -489,7 +489,7 @@ function tableCreate() {
     tr.setAttribute("id","tr3");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Montagem da Integração'));
+        td.appendChild(document.createTextNode('Montagem da Integração'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -504,7 +504,7 @@ function tableCreate() {
     tr.setAttribute("id","tr4");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('  ' + 'Instalação Ambiente DEV/HMG'));
+        td.appendChild(document.createTextNode('Instalação Ambiente DEV/HMG'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -519,7 +519,7 @@ function tableCreate() {
     tr.setAttribute("id","tr5");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Configuração Jobs HM'));
+        td.appendChild(document.createTextNode('Configuração Jobs HM'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -534,7 +534,7 @@ function tableCreate() {
     tr.setAttribute("id","tr6");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Instalação e-Agent DC HM'));
+        td.appendChild(document.createTextNode('Instalação e-Agent DC HM'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -549,7 +549,7 @@ function tableCreate() {
     tr.setAttribute("id","tr7");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Testes de Integração HM'));
+        td.appendChild(document.createTextNode('Testes de Integração HM'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -564,7 +564,7 @@ function tableCreate() {
     tr.setAttribute("id","tr8");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Testes de Fluxo HM'));
+        td.appendChild(document.createTextNode('Testes de Fluxo HM'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -579,7 +579,7 @@ function tableCreate() {
     tr.setAttribute("id","tr9");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Testes Unitários HM'));
+        td.appendChild(document.createTextNode('Testes Unitários HM'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -594,7 +594,7 @@ function tableCreate() {
     tr.setAttribute("id","tr10");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('  ' + 'Instalação Ambiente PRD'));
+        td.appendChild(document.createTextNode('Instalação Ambiente PRD'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -609,7 +609,7 @@ function tableCreate() {
     tr.setAttribute("id","tr11");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Configuração Jobs PRD'));
+        td.appendChild(document.createTextNode('Configuração Jobs PRD'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -624,7 +624,7 @@ function tableCreate() {
     tr.setAttribute("id","tr12");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Instalação e-Agent PRD'));
+        td.appendChild(document.createTextNode('Instalação e-Agent PRD'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -639,7 +639,7 @@ function tableCreate() {
     tr.setAttribute("id","tr13");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Testes de Fluxo PRD'));
+        td.appendChild(document.createTextNode('Testes de Fluxo PRD'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -654,7 +654,7 @@ function tableCreate() {
     tr.setAttribute("id","tr14");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Go Live'));
+        td.appendChild(document.createTextNode('Go Live'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -669,7 +669,7 @@ function tableCreate() {
     tr.setAttribute("id","tr15");
     for (var j = 0; j < 1; j++) {
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('   ' + 'Follow Up'));
+        td.appendChild(document.createTextNode('Follow Up'));
         tr.appendChild(td);
     }
         for (var j = 0; j < 1; j++) {
@@ -709,7 +709,6 @@ function tableCreate() {
     }
     tbdy.appendChild(tr);
   }   
-
   tbl.appendChild(tbdy);
   body.appendChild(tbl);
 };
