@@ -24,25 +24,25 @@
 }else{
 
         if (document.getElementById('eForms_NFeid').checked == true){
-            valoreFormsNFe = document.getElementById('CNPJRaizid').value * 40;
-            valoreFormsEntryNFe = document.getElementById('CNPJFilialid').value * 40;
+            Math.round(valoreFormsNFe = document.getElementById('CNPJRaizid').value * 40);
+            Math.round(valoreFormsEntryNFe = document.getElementById('CNPJFilialid').value * 40);
                 if (document.getElementById('AgentDCid').checked == true){
                     valorQtdeAgentDC = 30;
 }            
                 if (document.getElementById('AgentDCid').checked == false){
-                    valorQtdeAgentDC = document.getElementById('QtdeAgentDCid').value * 40;
+                    Math.round(valorQtdeAgentDC = document.getElementById('QtdeAgentDCid').value * 40);
 }
-            valorTotalEmissaoNFe = (valoreFormsNFe + valoreFormsEntryNFe + valorQtdeAgentDC) / 60 * 2;
+            Math.round(valorTotalEmissaoNFe = (valoreFormsNFe + valoreFormsEntryNFe + valorQtdeAgentDC) / 60 * 2);
   }
           if (document.getElementById('eForms_Entry_NFeid').checked == true){
-            valoreFormsEntryNFe = document.getElementById('CNPJRaizid').value * 40;
-            valorTotalEntryNFe = (valoreFormsEntryNFe) / 60 * 2;
+            Math.round(valoreFormsEntryNFe = document.getElementById('CNPJRaizid').value * 40);
+            Math.round(valorTotalEntryNFe = (valoreFormsEntryNFe) / 60 * 2);
   }
-  valorTotalDevHMG = ((valorTotalEmissaoNFe/2) + (valorTotalEntryNFe/2) + valorHorasTesteIntegracaoHM + valorHorasTesteFluxoHM + valorHorasTesteUnitarioHM);
-  valorTotalPRD = ((valorTotalEmissaoNFe/2) + (valorTotalEntryNFe/2) + valorHorasTesteFluxoPRD + valorHorasGoLive + valorHorasFollowUp);
-  valorTotalExtratoNFe = (valorTotalEmissaoNFe + valorTotalEntryNFe + valorHorasIntegracao + valorHorasTesteIntegracaoHM + 
-            valorHorasTesteFluxoHM + valorHorasTesteUnitarioHM + valorHorasTesteFluxoPRD + valorHorasGoLive + valorHorasFollowUp);
-  alert("Tempo Total NFe " + valorTotalExtratoNFe + " horas.");
+  valorTotalDevHMG =Math.round(((valorTotalEmissaoNFe/2) + (valorTotalEntryNFe/2) + valorHorasTesteIntegracaoHM + valorHorasTesteFluxoHM + valorHorasTesteUnitarioHM));
+  valorTotalPRD = Math.round(((valorTotalEmissaoNFe/2) + (valorTotalEntryNFe/2) + valorHorasTesteFluxoPRD + valorHorasGoLive + valorHorasFollowUp));
+  valorTotalExtratoNFe = Math.round((valorTotalEmissaoNFe + valorTotalEntryNFe + valorHorasIntegracao + valorHorasTesteIntegracaoHM + 
+            valorHorasTesteFluxoHM + valorHorasTesteUnitarioHM + valorHorasTesteFluxoPRD + valorHorasGoLive + valorHorasFollowUp));
+  alert("Tempo Total NFe " + Math.round(valorTotalExtratoNFe) + " horas.");
 }
 };
 
@@ -709,6 +709,174 @@ function tableCreate() {
     }
     tbdy.appendChild(tr);
   }   
+  tbl.appendChild(tbdy);
+  body.appendChild(tbl);
+};
+
+/*MONTA O EXTRATO SIMPLIFICADO */
+function SimpleTableCreate() {
+  var body = document.getElementsByTagName('body')[0];
+  var tbl = document.createElement('table');  
+  tbl.setAttribute('border', '1');
+  tbl.setAttribute('id', 'TabelaExtratoSimples');
+  var tbdy = document.createElement('tbody');
+
+  for (var i = 0; i < 1; i++) {
+    var th = document.createElement('th');
+    th.setAttribute("id","thsimple");
+    for (var j = 0; j < 1; j++) {
+        var tr = document.createElement('tr');
+        tr.setAttribute("id", "tr0simple1");
+        th.appendChild(tr);
+    }
+    for (var j = 0; j < 1; j++) {
+      var td = document.createElement('td');
+      td.setAttribute("id", "td0simple1", "colspan = '2'");
+      td.appendChild(document.createTextNode('TOTAL - Extrato de Horas Simplificado'));
+      tr.appendChild(td);
+  }
+  tbdy.appendChild(th);
+  }
+    
+  
+
+  for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr1simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td1simple1");
+        td.appendChild(document.createTextNode('Nome da Tarefa'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td1simple2");
+        td.appendChild(document.createTextNode('Duração em Horas'));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }
+
+  for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr2simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td2simple1");
+        td.appendChild(document.createTextNode('Estimativa de Horas'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td2simple2");
+        td.appendChild(document.createTextNode(valorTotalExtratoNFe.toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }  
+
+  for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr3simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('Coordenador de Projeto'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td3simple2");
+        td.appendChild(document.createTextNode(valorHorasIntegracao.toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }  
+
+  for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr4simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('Integração'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td4simple2");
+        td.appendChild(document.createTextNode(valorTotalDevHMG.toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }  
+
+    for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr5simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('Instalação Ambiente DEV/HMG'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td5simple2");
+        td.appendChild(document.createTextNode(Math.round(((valoreFormsNFe + valoreFormsEntryNFe)/60)).toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }
+
+    for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr6simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('Instalação Ambiente PRD'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td6simple2");
+        td.appendChild(document.createTextNode((valorQtdeAgentDC/60).toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }  
+
+    for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr7simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('Demandas/Customizações'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td7simple2");
+        td.appendChild(document.createTextNode(valorHorasTesteIntegracaoHM.toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }
+
+      for (var i = 0; i < 1; i++) {
+    var tr = document.createElement('tr');
+    tr.setAttribute("id","tr8simple");
+    for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('Importação de Legado'));
+        tr.appendChild(td);
+    }
+        for (var j = 0; j < 1; j++) {
+        var td = document.createElement('td');
+        td.setAttribute("id", "td8simple2");
+        td.appendChild(document.createTextNode(valorHorasTesteFluxoHM.toString()));
+        tr.appendChild(td);
+    }
+    tbdy.appendChild(tr);
+  }  
   tbl.appendChild(tbdy);
   body.appendChild(tbl);
 };
